@@ -6,7 +6,7 @@ const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const apiPort = 8080
+const apiPort = 'https://movie-task-api.vercel.app/'
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
