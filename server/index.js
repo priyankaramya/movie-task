@@ -1,12 +1,14 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+require('dotenv').config()
 
 const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const apiPort = 8080
+const apiPort = process.env.DOMAIN_URL || 8080
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
