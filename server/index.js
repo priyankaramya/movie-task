@@ -7,17 +7,17 @@ const db = require('./db')
 const movieRouter = require('./routes/movie-router')
 
 const app = express()
-const apiPort = process.env.DOMAIN_URL || 8080
+const apiPort = 8080
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors({ origin: "*" }))
+app.use(cors())
 app.use(bodyParser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send(api / movies)
 })
 
 app.use('/api', movieRouter)
