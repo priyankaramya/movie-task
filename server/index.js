@@ -11,7 +11,7 @@ const apiPort = 8080
 
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(cors())
+app.use(cors({ origin: 'https://movie-task-eta.vercel.app' }))
 app.use(bodyParser.json())
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))

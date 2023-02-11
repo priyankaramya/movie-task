@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://movie-task-eta.vercel.app/api',
+    baseURL: 'https://movie-task-api.vercel.app:8080/api',
 })
 
 export const insertMovie = payload => api.post(`/movie`, payload)
